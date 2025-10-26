@@ -1,8 +1,8 @@
 package Modul2.Tugas.Tugas3.SesudahRefactoring;
 
 // 1.) encapsulate field
-public class Obat {
-    private String namaObat;
+public class Obat extends Item {
+/*    private String namaObat;
     private String jadwal;
 
     public Obat(String namaObat, String jadwal) {
@@ -31,5 +31,30 @@ public class Obat {
     public void tampilkanDetailObat() {
         System.out.println("Nama Obat: " + namaObat);
         System.out.println("Jadwal Minum: " + jadwal);
+    }*/
+
+    private String dosis;
+    private String jadwal;
+
+    public Obat(String nama, String dosis, String jadwal) {
+        super(nama);
+        this.dosis = dosis;
+        this.jadwal = jadwal;
+    }
+
+    public String getDosis() {
+        return dosis;
+    }
+
+    public void setDosis(String dosis) {
+        this.dosis = dosis;
+    }
+
+    public String getJadwal() {
+        return jadwal;
+    }
+
+    public void setJadwal(String jadwal) {
+        this.jadwal = jadwal;
     }
 }
